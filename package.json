@@ -1,0 +1,18 @@
+{
+  "name": "filesystemlint",
+  "version": "0.0.0",
+  "dependencies": {
+    "glob": "^7.1.3",
+    "lodash": "~4.17.11"
+  },
+  "author": "fenderil",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fenderil/filesystemlint.git"
+  },
+  "scripts": {
+    "start": "node start.js",
+    "test": "echo 'there is no tests yet' && exit 0"
+  }
+}

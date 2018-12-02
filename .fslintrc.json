@@ -1,0 +1,17 @@
+{
+  "extends": "",
+  "rules": {
+    "cases": {
+      "severity": "error",
+      "options": {
+        "case": "kebab-case"
+      }
+    },
+    "no-dirs-extension": {
+      "severity": "error"
+    },
+    "no-empty-dirs": {
+      "severity": "error"
+    }
+  }
+}

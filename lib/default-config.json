@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "cases": {
+      "severity": "error",
+      "options": {
+        "case": "kebab-case"
+      }
+    }
+  }
+}
