@@ -5,6 +5,12 @@
       "options": {
         "case": "kebab-case"
       }
-    }
+    },
+    "new-line-end-file": "warning",
+    "no-dirs-extension": "error",
+    "no-duplicates": "error",
+    "no-empty-dirs": "warning",
+    "no-empty-files": "warning",
+    "required-index": "warning"
   }
 }

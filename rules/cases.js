@@ -1,24 +1,18 @@
 const _ = require('lodash')
 
-// kebab-case, camelCase, PascalCase, sneak_case, ...etc
 const caseMapping = {
     'kebab-case': _.kebabCase,
-    'camelCase': _.camelCase
+    'camelCase': _.camelCase,
+    'snake_case': _.snakeCase,
+    'PascalCase': (str) => _.upperFirst(_.camelCase(str))
 }
 
-module.exports = function (relativePath, absolutePath, collection, options) {
-    const expectedCase = (options || {}).case || 'kebab-case'
+module.exports = {
+    rule: function (model, options = {}) {
+        const expectedCase = options.case || 'kebab-case'
 
-    const fileName = relativePath.split('/').pop().split('.')[0]
-
-    if (caseMapping[expectedCase](fileName) !== fileName) {
-        return 'File "' + absolutePath + '" isn\'t in ' + expectedCase
+        if (caseMapping[expectedCase](model.name) !== model.name) {
+            return `File isn't in ${expectedCase}`
+        }
     }
-
-    return void ''
-}
-
-
-module.exports.fix = function () {
-    // TODO: rename (from deeper to upper)
 }

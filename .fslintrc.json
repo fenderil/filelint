@@ -1,5 +1,4 @@
 {
-  "extends": "",
   "rules": {
     "cases": {
       "severity": "error",
@@ -7,11 +6,36 @@
         "case": "kebab-case"
       }
     },
+    "crlf": {
+      "severity": "warning",
+      "options": {
+        "crlf": "crlf"
+      }
+    },
+    "max-depth": {
+      "severity": "error",
+      "options": {
+        "depth": 2
+      }
+    },
+    "new-line-end-file": "warning",
     "no-dirs-extension": {
+      "severity": "error",
+      "options": {
+        "invalidExtensions": [".js", ".jsx"]
+      }
+    },
+    "no-duplicates": {
       "severity": "error"
     },
-    "no-empty-dirs": {
-      "severity": "error"
-    }
+    "no-empty-dirs": "error",
+    "no-empty-files": "warning",
+    "project-structure": {
+      "severity": "warning",
+      "options": {
+        "structure": {}
+      }
+    },
+    "required-index": 1
   }
 }
