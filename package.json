@@ -1,5 +1,5 @@
 {
-  "name": "filesystemlint",
+  "name": "filesystemlinter",
   "version": "0.0.1-0",
   "bin": {
     "fslint": "bin/fslint.js"
