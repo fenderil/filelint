@@ -1,7 +1,7 @@
 module.exports = {
     rule: function (model) {
         if (model.directory && model.ext) {
-            return 'Directory is with extension'
+            return { message: 'Directory is with extension' }
         }
     }
 }

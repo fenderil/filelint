@@ -17,15 +17,24 @@
     "locate-path": "~3.0.0",
     "lodash": "~4.17.11"
   },
+  "devDependencies": {
+    "eslint": "~5.12.0",
+    "eslint-config-common": "~3.0.1",
+    "eslint-plugin-import": "~2.14.0",
+    "eslint-plugin-node": "~8.0.1",
+    "eslint-plugin-promise": "~4.0.1",
+    "eslint-plugin-standard": "~4.0.0"
+  },
   "author": "fenderil",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:fenderil/filesystemlint.git"
+    "url": "git@github.com:fenderil/filesystemlinter.git"
   },
   "entry": "lib/index.js",
   "scripts": {
     "start": "node start.js",
+    "eslint": "eslint .",
     "test": "node test-myself.js"
   }
 }

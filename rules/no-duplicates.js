@@ -6,7 +6,7 @@ module.exports = {
             const uniqueChildrenCount = _.uniqBy(model.children, 'name').length
 
             if (uniqueChildrenCount !== model.children.length) {
-                return 'Directory has duplicated children'
+                return { message: 'Directory has duplicated children' }
             }
         }
     }

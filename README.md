@@ -17,13 +17,25 @@ const fslint = require('filesystemlint')
 
 fslint({
     configPath: './.fslintrc',
-    target: '.',
-    ignore: ['node_modules', '.git', '.idea']
+    target: '.'
 })
 ```
 
 ## Recommended config
-[There](./lib/default-config.json)
+[There](./lib/config/default.json)
+
+## Configuration
+* extends (string, array(string)) - where can linter get more rule configurations
+* plugins (string, array(string)) - where can linter get more rule callbacks
+* ignore (string, array(string)) - where linter shouldn't look up (with all subfiles and subdirs)
+* overrides /coming/
+* rules (object) - set of rules as keys and their configurations as values.
+Rule severity can be set without options as rule value or
+with options as object value under "severity" key.
+Possible values:
+  * Warning - one of 'warning', 'warn', 1
+  * Error - one of 'error', 2
+  * Nothing - one of 'off', 0
 
 ## Rules
 * cases - files' and folders' case
@@ -38,16 +50,31 @@ fslint({
 * required-index - in each folder must be index file
 * ...your recommendations
 
+## Rules API
+Each rule exports object with keys:
+* rule (required) - cb that returns object with message, if check is not passed
+* fix (optional) - cb for fixing lint error/warn
+
+Both functions getting current model node.
+Node includes:
+* directory (bool) - is node directory
+* file (bool) - is node file
+* relativePath (string) - relative path to the node
+* size (number) - byte size of node
+* isProjectRoot (bool) - is node root of project
+* parent (Node) - parent node
+* depth (number) - depth of node in project structure
+* projectRoot (string) - path to project root
+* absolutePath (string) - absolute path to the node
+
+And absolute path parsed data (https://nodejs.org/api/path.html#path_path_parse_path)
+
 ## Coming features
-* Reading of plugins
-* Reading of extends
-* Fix flag
-* Quiet flag
+* Fix flag (should modify node model and work in reverse - from deep nodes to root node)
 * File reporters
 * Throwing errors
-* Global ignore patters (some folder are hardcoded for the current moment)
-* Personal rule ignore patters
 * Structure comparing
+* Overrides
 * Stream, links and other
 * ...your recommendations
 
@@ -55,3 +82,9 @@ fslint({
 
 * Name: Tupitckiy Ilya
 * Email: fenderil@yandex.ru
+
+____
+
+And it's very simple to white rules for filesystemlinter!
+All you need for check is in Node object.
+And you can get more data for check by using absolute path.

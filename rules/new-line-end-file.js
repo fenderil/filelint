@@ -6,7 +6,7 @@ module.exports = {
             const body = fs.readFileSync(model.absolutePath, 'utf8')
 
             if (!body.endsWith('\n')) {
-                return 'File doesn\'t end with new line'
+                return { message: 'File doesn\'t end with new line' }
             }
         }
     }

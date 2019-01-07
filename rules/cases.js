@@ -12,7 +12,7 @@ module.exports = {
         const expectedCase = options.case || 'kebab-case'
 
         if (caseMapping[expectedCase](model.name) !== model.name) {
-            return `File isn't in ${expectedCase}`
+            return { message: `File isn't in ${expectedCase}` }
         }
     }
 }

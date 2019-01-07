@@ -6,7 +6,7 @@ module.exports = {
             const index = _.find(model.children, (child) => child.base.startsWith('index.'))
 
             if (!index) {
-                return 'Directory is without index file'
+                return { message: 'Directory is without index file' }
             }
         }
     }
