@@ -30,6 +30,12 @@
         "structure": {}
       }
     },
-    "required-index": 1
+    "required-index": 1,
+    "allowed-extensions": "warning"
+  },
+  "overrides": {
+    "README.md|LICENSE": {
+      "cases": 0
+    }
   }
 }

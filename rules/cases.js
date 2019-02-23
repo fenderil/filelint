@@ -10,8 +10,10 @@ const caseMapping = {
 module.exports = {
     rule: function (model, options = {}) {
         const expectedCase = options.case || 'kebab-case'
+        const allowDot = options.allowDot || true
+        const cleanName = allowDot ? model.name.replace(/^\./, '') : model.name
 
-        if (caseMapping[expectedCase](model.name) !== model.name) {
+        if (caseMapping[expectedCase](cleanName) !== cleanName) {
             return { message: `File isn't in ${expectedCase}` }
         }
     }

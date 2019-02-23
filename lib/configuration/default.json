@@ -11,6 +11,7 @@
     "no-duplicates": "error",
     "no-empty-dirs": "warning",
     "no-empty-files": "warning",
-    "required-index": "warning"
+    "required-index": "warning",
+    "allowed-extensions": "warning"
   }
 }

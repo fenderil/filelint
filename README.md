@@ -77,6 +77,18 @@ And absolute path parsed data (https://nodejs.org/api/path.html#path_path_parse_
 * Stream, links and other
 * ...your recommendations
 
+
+## Roadmap
+
+* Extend (hold)
+* Plugin (hold)
+* Config parser
+* Overrides (cause no inline comments are allowed)
+* Reporters (not only CLI)
+* Flags like quiet and fix
+* .fsolintignore
+* Project structure rule
+
 ## Credentials
 
 * Name: Tupitckiy Ilya

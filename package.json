@@ -10,6 +10,8 @@
     "filesystem",
     "lint",
     "filelint",
+    "fslint",
+    "fsolint",
     "linter",
     "linting"
   ],
