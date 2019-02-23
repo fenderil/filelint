@@ -1,13 +1,15 @@
 {
-  "name": "filesystemlinter",
+  "name": "filelint",
   "version": "0.0.1-1",
   "bin": {
-    "fslint": "bin/fslint.js"
+    "filelint": "bin/filelint.js"
   },
   "keywords": [
     "fs",
+    "file",
     "filesystem",
     "lint",
+    "filelint",
     "linter",
     "linting"
   ],
@@ -29,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:fenderil/filesystemlinter.git"
+    "url": "git@github.com:fenderil/filelint.git"
   },
   "entry": "lib/index.js",
   "scripts": {

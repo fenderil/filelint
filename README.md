@@ -1,4 +1,4 @@
-# filesystemlint
+# filelint
 Linter for project's file system
 
 ## Why?
@@ -13,7 +13,7 @@ Additionally linter would be helpful for new developers in project.
 
 ### Node.js
 ```
-const fslint = require('filesystemlint')
+const fslint = require('filesystemlinter')
 
 fslint({
     configPath: './.fslintrc',
@@ -22,14 +22,14 @@ fslint({
 ```
 
 ## Recommended config
-[There](./lib/config/default.json)
+[There](./lib/configuration/default.json)
 
 ## Configuration
-* extends (string, array(string)) - where can linter get more rule configurations
-* plugins (string, array(string)) - where can linter get more rule callbacks
-* ignore (string, array(string)) - where linter shouldn't look up (with all subfiles and subdirs)
+* extends (`string|array[string]`) - where can linter get more rule configurations
+* plugins (`string|array[string]`) - where can linter get more rule callbacks
+* ignore (`string|array[string]`) - where linter shouldn't look up (with all subfiles and subdirs)
 * overrides /coming/
-* rules (object) - set of rules as keys and their configurations as values.
+* rules (`object`) - set of rules as keys and their configurations as values.
 Rule severity can be set without options as rule value or
 with options as object value under "severity" key.
 Possible values:
@@ -39,7 +39,6 @@ Possible values:
 
 ## Rules
 * cases - files' and folders' case
-* crlf (not developed) - new line cr/lf chars
 * max-depth - max depth of folder/file in project
 * new-line-end-file - \n in end of each file
 * no-dirs-extension - folders without extensions
@@ -57,15 +56,15 @@ Each rule exports object with keys:
 
 Both functions getting current model node.
 Node includes:
-* directory (bool) - is node directory
-* file (bool) - is node file
-* relativePath (string) - relative path to the node
-* size (number) - byte size of node
-* isProjectRoot (bool) - is node root of project
-* parent (Node) - parent node
-* depth (number) - depth of node in project structure
-* projectRoot (string) - path to project root
-* absolutePath (string) - absolute path to the node
+* directory (`bool`) - is node directory
+* file (`bool`) - is node file
+* relativePath (`string`) - relative path to the node
+* size (`number`) - byte size of node
+* isProjectRoot (`bool`) - is node root of project
+* parent (`Node`) - parent node
+* depth (`number`) - depth of node in project structure
+* projectRoot (`string`) - path to project root
+* absolutePath (`string`) - absolute path to the node
 
 And absolute path parsed data (https://nodejs.org/api/path.html#path_path_parse_path)
 

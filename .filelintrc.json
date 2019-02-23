@@ -6,12 +6,6 @@
         "case": "kebab-case"
       }
     },
-    "crlf": {
-      "severity": "warning",
-      "options": {
-        "crlf": "crlf"
-      }
-    },
     "max-depth": {
       "severity": "error",
       "options": {
