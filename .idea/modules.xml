@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/filelint.iml" filepath="$PROJECT_DIR$/.idea/filelint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fsolint/.idea/fsolint.iml" filepath="$PROJECT_DIR$/../fsolint/.idea/fsolint.iml" />
     </modules>
   </component>
 </project>

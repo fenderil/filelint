@@ -1,8 +1,8 @@
 {
-  "name": "filelint",
+  "name": "fsolint",
   "version": "0.0.1-0",
   "bin": {
-    "filelint": "bin/filelint.js"
+    "fsolint": "bin/fsolint.js"
   },
   "keywords": [
     "fs",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:fenderil/filelint.git"
+    "url": "git@github.com:fenderil/fsolint.git"
   },
   "entry": "lib/index.js",
   "scripts": {

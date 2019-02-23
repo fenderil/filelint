@@ -1,4 +1,4 @@
-# filelint
+# fsolint
 Linter for project's file system
 
 ## Why?
@@ -9,14 +9,14 @@ Additionally linter would be helpful for new developers in project.
 ## API
 
 ### CLI
-`fslint --target="." --config="./.fslintrc"`
+`fslint --target="." --config="./.fsolintrc"`
 
 ### Node.js
 ```
-const fslint = require('filesystemlinter')
+const fsolint = require('fsolint')
 
-fslint({
-    configPath: './.fslintrc',
+fsolint({
+    configPath: './.fsolintrc',
     target: '.'
 })
 ```
@@ -84,6 +84,6 @@ And absolute path parsed data (https://nodejs.org/api/path.html#path_path_parse_
 
 ____
 
-And it's very simple to white rules for filesystemlinter!
+And it's very simple to white rules for fsolint!
 All you need for check is in Node object.
 And you can get more data for check by using absolute path.
